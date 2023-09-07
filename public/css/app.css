@@ -1,0 +1,652 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;0,800;1,300;1,500;1,600;1,700;1,800&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+input:focus,
+textarea:focus {
+    border-bottom: 2px solid blue !important;
+    outline: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff;
+}
+header {
+    display: flex;
+    backdrop-filter: blur(10px);
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+    padding: 18px;
+    justify-content: space-between;
+    background-color: rgba(186, 186, 186, 0.195);
+}
+.navBar {
+    display: flex;
+    gap: 30px;
+    padding-right: 40px;
+}
+
+.logoContainer {
+    padding-left: 50px;
+}
+.logoContainer h1 {
+    padding-top: 9px;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.logoContainer h1 span {
+    color: red;
+}
+.navBar a {
+    font-size: 14px;
+    color: black;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 14px;
+}
+.navBar li {
+    padding: 6px 5px 8px 7px;
+
+    transition: 0.7s;
+    border-radius: 20px;
+}
+.navBar li:hover {
+    transition: 0.7s;
+    font-weight: 700;
+    transform: scale(1.1);
+    background-color: rgba(255, 0, 0, 0.489);
+}
+.navBtn {
+    display: none;
+    right: 0;
+    margin-right: 15px;
+    position: absolute;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    transition: 1s;
+    cursor: pointer;
+}
+.navBtn span {
+    display: block;
+    width: 33px;
+    height: 3px;
+    margin-bottom: 5px;
+    position: relative;
+    z-index: 1;
+    border-radius: 16px;
+    background-color: black;
+    transform-origin: 0 0;
+    transition: 0.4s;
+}
+#btn1,
+#btn2,
+#btn3 {
+    transition: 1s;
+}
+#btn3.active {
+    transform: translateX(20px);
+    opacity: 0;
+    transition: 1s;
+}
+#btn1.active {
+    background-color: crimson;
+    transition: 1s;
+    transform: translate(4.7px, -5px) rotate(45deg);
+}
+#btn2.active {
+    background-color: crimson;
+
+    transition: 1s;
+    transform: translate(2px, 2px) rotate(-45deg);
+}
+.addRow {
+    display: flex;
+    position: absolute;
+    margin-top: 76px;
+    background-color: rgba(44, 126, 129, 0.603);
+    padding: 20px 0;
+    width: 100%;
+    justify-content: center;
+
+    gap: 20px;
+}
+.addRow button {
+    background-color: rgb(195, 93, 93);
+    border-radius: 5px;
+    border: none;
+    position: absolute;
+    margin: -37px 0px 0 8.7em;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: 0.5s;
+}
+.addRow button:hover {
+    scale: 1.07;
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: rgba(237, 48, 48, 0.781);
+    color: white;
+}
+.addRow h1 {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Times New Roman", Times, serif;
+}
+.addContent {
+    margin-left: -85px;
+}
+.alertBox {
+    z-index: 999;
+    background-color: crimson;
+    position: absolute;
+    width: 300px;
+    height: 40px;
+    color: white;
+    top: 0;
+    margin-top: 10px;
+    padding-left: 4px;
+    border-radius: 20px;
+    left: 41%;
+    text-align: center;
+    padding-top: 8px;
+}
+.yieldSection {
+    padding: 200px 0px 100px 0px;
+}
+.searchRow {
+    width: 90.5%;
+    margin-left: 70px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid grey;
+    margin-top: 72px;
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+}
+.searchRow form {
+    display: flex;
+    flex-direction: row;
+    z-index: -1;
+    width: 100%;
+}
+.searchRow form input {
+    width: 100%;
+    height: 50px;
+    border: none;
+    padding: 0px 20px;
+    color: rgb(48, 48, 48);
+    border-radius: 40px;
+    font-size: 18px;
+}
+
+.searchBtn {
+    padding: 10px 17px;
+    margin: 3px 3px 3px -100px;
+    border-radius: 40px;
+    letter-spacing: 1px;
+    border: none;
+    font-weight: 500;
+    background-color: red;
+    z-index: 999;
+}
+.clearBtn {
+    background-color: transparent;
+    padding: 0px 17px;
+    border: none;
+    margin: 3px;
+    margin-right: 102px;
+    border-radius: 50%;
+    z-index: 9999;
+}
+.buttons {
+    display: flex;
+    position: absolute;
+    right: 0;
+    gap: 0px;
+}
+.searchRow button {
+    transition: 0.5s;
+
+    text-transform: uppercase;
+}
+.searchRow button:hover {
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    transition: 0.5s;
+}
+/* Hero Section */
+.hero {
+    height: 100vh;
+    font-size: 50px;
+    font-weight: 7 00;
+    text-transform: uppercase;
+    margin-top: -54px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(196, 194, 194, 0.604);
+}
+
+/*Listings Tab*/
+
+.listings h1 {
+    font-size: 30px;
+}
+.container {
+    margin-top: 70px;
+    width: 100%;
+    display: flex;
+    padding-bottom: 20px;
+    gap: 80px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.listImg {
+    margin-top: 20px;
+    width: 200px;
+}
+.box {
+    padding: 25px 14px;
+    background-color: rgba(204, 204, 204, 0.822);
+    flex-basis: 40%;
+    height: auto;
+    border-radius: 15px;
+    width: 100%;
+}
+.box h1 {
+    text-align: left;
+    font-size: 20px;
+}
+.box .row {
+    margin-top: 3%;
+}
+.tags {
+    display: flex;
+    gap: 10px;
+}
+.tags span {
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+    padding: 7px 14px;
+    border-radius: 25px;
+}
+
+.box .description {
+    margin-top: 10px;
+    overflow: hidden;
+}
+.pageControl {
+    padding: 10px 70px;
+}
+/* Single Listing Tab*/
+.listing {
+    padding: 20px 390px;
+}
+.listBox {
+    padding: 40px 20px;
+    background-color: rgb(198, 197, 197);
+    border-radius: 30px;
+    height: 50vh;
+    position: relative;
+}
+.listing h1 {
+    font-size: 23px;
+    text-align: left;
+    padding-bottom: 30px;
+}
+.boxContent {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 50px;
+}
+.mdfBtns {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+.edtBtn {
+    flex-basis: 47%;
+    height: 40px;
+    margin-top: 20px;
+    background-color: rgb(65, 112, 146);
+    border-radius: 20px;
+    color: white;
+    transition: 0.7s;
+    text-align: center;
+    padding-top: 7px;
+}
+.mdfBtns a:hover {
+    background-color: rgb(43, 42, 42);
+    scale: 1.08;
+    transition: 0.7s;
+    cursor: pointer;
+}
+.mdfBtns form {
+    flex-basis: 47%;
+}
+.mdfBtns .dltBtn {
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    background-color: crimson;
+    border-radius: 20px;
+    color: white;
+    transition: 0.7s;
+}
+.dltBtn:hover {
+    background-color: rgb(43, 42, 42);
+    scale: 1.08;
+    transition: 0.7s;
+    cursor: pointer;
+}
+/* Footer Styling */
+footer {
+    background: #222222;
+    color: #fff;
+    padding: 25px 0;
+    bottom: 0;
+}
+footer .row {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    justify-content: space-evenly;
+}
+.foot-1 {
+    flex-basis: 30%;
+    height: 260px;
+    text-align: center;
+    padding-top: 40px;
+    color: white;
+}
+.footDescription {
+    margin-top: 10px;
+    padding: 10px;
+}
+.foot-1 .socials {
+    font-size: 20px;
+    margin: 20px;
+    letter-spacing: 10px;
+}
+.foot-2 {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 39%;
+    padding: 50px 80px 50px 110px;
+    gap: 20px;
+    height: 260px;
+    background-color: transparent;
+}
+
+.foot-2 i {
+    padding: 13px;
+    border-radius: 50%;
+    background-color: rgba(232, 44, 44, 0.566);
+    border: none;
+}
+
+hr {
+    display: none;
+}
+.foot-2 span {
+    font-size: 15px;
+
+    letter-spacing: 1px;
+}
+.foot-3 {
+    flex-basis: 25%;
+    height: 260px;
+    padding: 20px;
+
+    text-align: center;
+}
+.foot-3 span {
+    border-bottom: solid 2px white;
+    font-size: 27px;
+    padding: 4px 10px;
+}
+
+.foot-3 ul {
+    margin-top: 20px;
+    font-size: 18px;
+    display: grid;
+    gap: 5px;
+}
+
+/* Create Listing */
+.createListing {
+    display: flex;
+    justify-content: center;
+}
+.createForm {
+    background-color: rgb(248, 249, 250);
+    display: flex;
+    border: 1px solid rgb(244, 244, 244);
+    padding: 20px 50px;
+    flex-direction: column;
+    gap: 0px;
+    width: 450px;
+}
+.createForm label {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+.createForm button {
+    margin-top: 20px;
+    height: 35px;
+    background-color: rgb(99, 99, 99);
+    color: white;
+    border-radius: 20px;
+}
+.createForm h1 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+.createForm input {
+    height: 45px;
+    font-size: 15px;
+    padding: 5px;
+    width: 100%;
+    border-bottom: 1px solid rgb(175, 175, 175);
+}
+.createForm textarea {
+    resize: none;
+    width: 100%;
+    border: rgb(168, 167, 167) 1px solid;
+    padding: 10px;
+}
+.inputDiv {
+    margin-top: 20px;
+}
+.createForm a {
+    margin-top: 20px;
+    height: 35px;
+    text-align: center;
+    padding-top: 5px;
+    background-color: rgb(99, 99, 99);
+    color: white;
+    border-radius: 20px;
+}
+/* Create Listing */
+
+/* Login Page */
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.formbox {
+    background-color: rgb(223, 223, 223);
+    border-radius: 30px;
+    width: 27%;
+    margin-top: 50px;
+}
+.loginForm {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.loginForm input {
+    background-color: rgba(218, 218, 218, 0.633);
+    border-bottom: solid 2px black;
+    height: 40px;
+    font-size: 18px;
+    margin-top: 30px;
+    padding: 5px;
+}
+
+.loginForm h1:nth-child(2) {
+    text-align: center;
+    letter-spacing: 1.7px;
+    border-left: 2px solid black;
+    font-size: 25px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.loginForm h1:nth-child(2) span {
+    color: red;
+}
+
+.loginForm h1:nth-child(3) {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.loginForm a {
+    text-decoration: underline;
+}
+.loginForm span {
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+.loginForm button {
+    background-color: rgb(54, 117, 129);
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 20px;
+    margin-top: 40px;
+    transition: 0.4s;
+}
+.loginForm button:hover {
+    transition: 0.4s;
+    scale: 1.05;
+    background-color: black;
+    color: white;
+}
+/* Login Page */
+
+/*Manage Listings*/
+table th {
+    padding: 20px;
+    border: 2px red;
+    font-size: 20px;
+    text-align: left;
+}
+/*Manage Listings*/
+
+/* Responsive Code */
+@media (max-width: 62em) {
+    .listings {
+        padding: 0px 17px 0px 17px;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .box {
+        width: 100%;
+    }
+
+    .searchRow form {
+        margin-bottom: -20px;
+        margin: 0;
+    }
+    .searchRow {
+        margin-left: 0px;
+        width: 100%;
+    }
+    .searchRow form input {
+        margin-left: 0;
+    }
+    .foot-1,
+    .foot-3 {
+        padding: 10px;
+    }
+    .foot-2 {
+        text-align: center;
+        padding: 10px;
+    }
+    .navBtn {
+        display: block;
+    }
+    .navBar {
+        display: none;
+    }
+
+    .logoContainer {
+        padding-left: 12px;
+    }
+    footer .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px;
+        gap: 20px;
+    }
+    hr {
+        display: block;
+    }
+
+    .listing {
+        padding: 10px;
+    }
+
+    .addRow button {
+        position: relative;
+        margin: 0;
+        width: 100%;
+    }
+    .addRow {
+        padding: 10px 0px;
+    }
+    .addContent {
+        display: grid;
+        flex-direction: column;
+        gap: 5px;
+        justify-content: center;
+        margin-left: 0;
+    }
+    .formbox {
+        width: 100%;
+    }
+    .loginForm {
+        padding: 40px;
+    }
+}
